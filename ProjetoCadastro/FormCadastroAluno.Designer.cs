@@ -43,9 +43,14 @@
             txtNascimento = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             txtMatricula = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tabPageConsulta = new TabPage();
+            btnNovo = new ReaLTaiizor.Controls.MaterialButton();
+            btnExcluir = new ReaLTaiizor.Controls.MaterialButton();
+            btnEditar = new ReaLTaiizor.Controls.MaterialButton();
+            mlvAlunos = new ReaLTaiizor.Controls.MaterialListView();
             imageList1 = new ImageList(components);
             TabControlCadastro.SuspendLayout();
             tabPageCadastro.SuspendLayout();
+            tabPageConsulta.SuspendLayout();
             SuspendLayout();
             // 
             // TabControlCadastro
@@ -126,6 +131,7 @@
             btnCancela.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             btnCancela.UseAccentColor = false;
             btnCancela.UseVisualStyleBackColor = true;
+            btnCancela.Click += btnCancela_Click;
             // 
             // txtSenha
             // 
@@ -384,6 +390,10 @@
             // 
             // tabPageConsulta
             // 
+            tabPageConsulta.Controls.Add(btnNovo);
+            tabPageConsulta.Controls.Add(btnExcluir);
+            tabPageConsulta.Controls.Add(btnEditar);
+            tabPageConsulta.Controls.Add(mlvAlunos);
             tabPageConsulta.ImageKey = "search.png";
             tabPageConsulta.Location = new Point(4, 31);
             tabPageConsulta.Name = "tabPageConsulta";
@@ -392,6 +402,89 @@
             tabPageConsulta.TabIndex = 1;
             tabPageConsulta.Text = "Consulta";
             tabPageConsulta.UseVisualStyleBackColor = true;
+            tabPageConsulta.Enter += tabPageConsulta_Enter;
+            // 
+            // btnNovo
+            // 
+            btnNovo.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnNovo.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnNovo.Depth = 0;
+            btnNovo.HighEmphasis = true;
+            btnNovo.Icon = null;
+            btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnNovo.Location = new Point(948, 558);
+            btnNovo.Margin = new Padding(4, 6, 4, 6);
+            btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnNovo.Name = "btnNovo";
+            btnNovo.NoAccentTextColor = Color.Empty;
+            btnNovo.Size = new Size(64, 36);
+            btnNovo.TabIndex = 3;
+            btnNovo.Text = "Novo";
+            btnNovo.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnNovo.UseAccentColor = false;
+            btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Click += btnNovo_Click;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnExcluir.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnExcluir.Depth = 0;
+            btnExcluir.HighEmphasis = true;
+            btnExcluir.Icon = null;
+            btnExcluir.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnExcluir.Location = new Point(713, 558);
+            btnExcluir.Margin = new Padding(4, 6, 4, 6);
+            btnExcluir.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.NoAccentTextColor = Color.Empty;
+            btnExcluir.Size = new Size(80, 36);
+            btnExcluir.TabIndex = 2;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnExcluir.UseAccentColor = false;
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += materialButton1_Click_1;
+            // 
+            // btnEditar
+            // 
+            btnEditar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnEditar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnEditar.Depth = 0;
+            btnEditar.HighEmphasis = true;
+            btnEditar.Icon = null;
+            btnEditar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnEditar.Location = new Point(836, 558);
+            btnEditar.Margin = new Padding(4, 6, 4, 6);
+            btnEditar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnEditar.Name = "btnEditar";
+            btnEditar.NoAccentTextColor = Color.Empty;
+            btnEditar.Size = new Size(71, 36);
+            btnEditar.TabIndex = 1;
+            btnEditar.Text = "Editar";
+            btnEditar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnEditar.UseAccentColor = false;
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += materialButton1_Click;
+            // 
+            // mlvAlunos
+            // 
+            mlvAlunos.AutoSizeTable = false;
+            mlvAlunos.BackColor = Color.FromArgb(255, 255, 255);
+            mlvAlunos.BorderStyle = BorderStyle.None;
+            mlvAlunos.Depth = 0;
+            mlvAlunos.FullRowSelect = true;
+            mlvAlunos.Location = new Point(3, 3);
+            mlvAlunos.MinimumSize = new Size(200, 100);
+            mlvAlunos.MouseLocation = new Point(-1, -1);
+            mlvAlunos.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            mlvAlunos.Name = "mlvAlunos";
+            mlvAlunos.OwnerDraw = true;
+            mlvAlunos.Size = new Size(1009, 494);
+            mlvAlunos.TabIndex = 0;
+            mlvAlunos.UseCompatibleStateImageBehavior = false;
+            mlvAlunos.View = View.Details;
+            mlvAlunos.MouseDoubleClick += mlvAlunos_MouseDoubleClick;
             // 
             // imageList1
             // 
@@ -415,6 +508,8 @@
             TabControlCadastro.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();
+            tabPageConsulta.ResumeLayout(false);
+            tabPageConsulta.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -434,5 +529,9 @@
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtSenha;
         private ReaLTaiizor.Controls.MaterialButton btnConfirma;
         private ReaLTaiizor.Controls.MaterialButton btnCancela;
+        private ReaLTaiizor.Controls.MaterialListView mlvAlunos;
+        private ReaLTaiizor.Controls.MaterialButton btnEditar;
+        private ReaLTaiizor.Controls.MaterialButton btnNovo;
+        private ReaLTaiizor.Controls.MaterialButton btnExcluir;
     }
 }

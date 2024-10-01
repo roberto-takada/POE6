@@ -32,6 +32,7 @@
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             alunoToolStripMenuItem = new ToolStripMenuItem();
+            cursoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             // cadastroToolStripMenuItem
             // 
-            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { alunoToolStripMenuItem });
+            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { alunoToolStripMenuItem, cursoToolStripMenuItem });
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             cadastroToolStripMenuItem.Size = new Size(82, 24);
             cadastroToolStripMenuItem.Text = "Cadastro";
@@ -55,9 +56,16 @@
             // alunoToolStripMenuItem
             // 
             alunoToolStripMenuItem.Name = "alunoToolStripMenuItem";
-            alunoToolStripMenuItem.Size = new Size(131, 26);
+            alunoToolStripMenuItem.Size = new Size(224, 26);
             alunoToolStripMenuItem.Text = "Aluno";
             alunoToolStripMenuItem.Click += alunoToolStripMenuItem_Click;
+            // 
+            // cursoToolStripMenuItem
+            // 
+            cursoToolStripMenuItem.Name = "cursoToolStripMenuItem";
+            cursoToolStripMenuItem.Size = new Size(224, 26);
+            cursoToolStripMenuItem.Text = "Curso";
+            cursoToolStripMenuItem.Click += cursoToolStripMenuItem_Click;
             // 
             // FormPrincipal
             // 
@@ -85,5 +93,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem alunoToolStripMenuItem;
+        private ToolStripMenuItem cursoToolStripMenuItem;
     }
 }

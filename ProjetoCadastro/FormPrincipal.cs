@@ -20,9 +20,16 @@ namespace ProjetoCadastro
         {
             if (e.CloseReason == CloseReason.ApplicationExitCall)
             {
-                e.Cancel = true; 
+                e.Cancel = true;
             }
 
+        }
+
+        private void cursoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCadastraCurso formCurso = new FormCadastraCurso();
+            formCurso.MdiParent = this;
+            formCurso.Show();
         }
     }
 }
