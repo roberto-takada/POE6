@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kUSS1kJBbDccphHYTgkkc4bRC8Fc78qYrRFX9s69yQDMQ0/VwuLSNNsiKMa7Dxo0XadH7L9YWe5Ae/HngJOaVw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\usuario\\source\\repos\\FormsComBancoDeDados\\FormsComBancoDeDados\\FormsComBancoDeDados.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\usuario\\.nuget\\packages\\realtaiizor\\3.8.0.7\\realtaiizor.3.8.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}
